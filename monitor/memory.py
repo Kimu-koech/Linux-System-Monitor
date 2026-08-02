@@ -1,19 +1,19 @@
+from monitor.utils import format_bytes
 import psutil
-
 
 def get_memory_usage():
     memory=psutil.virtual_memory()
-    return memory.percent
+    return format_bytes(memory.percent)
 
 def get_total_memory():
     memory=psutil.virtual_memory()
-    return memory.total
+    return format_bytes(memory.total)
 
 def get_used_memory():
     memory=psutil.virtual_memory()
-    return memory.used
+    return format_bytes(memory.used)
 
 def get_available_memory():
     memory=psutil.virtual_memory()
-    return memory.available
+    return format_bytes(memory.available)
 
