@@ -16,11 +16,6 @@ def get_free_disk():
     disk=psutil.disk_usage("/")
     return format_bytes(disk.free)
 
-if __name__=="__main__":
-    print(get_disk_usage(),"%")
-    print(get_total_disk())
-    print(get_used_disk())
-    print(get_free_disk())
 
 
 
